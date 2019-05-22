@@ -26,7 +26,14 @@ VUE_APP_JCDECAUX_CITY
 VUE_APP_MAPBOX_TOKEN is your mapbox token see [Mapbox](https://www.mapbox.com/).  
 VUE_APP_MAPBOX_STYLE is your Mapbox map's style url, see [here](https://docs.mapbox.com/mapbox-gl-js/style-spec/).  
 VUE_APP_JCDECAUX_API_KEY is your JCDecaux API key, see [JCDecaux dev platform](https://developer.jcdecaux.com/#/opendata/vls?page=getstarted).  
-VUE_APP_JCDECAUX_CITY is the city you aim, see [here](https://developer.jcdecaux.com/#/opendata/vls?page=static) it's name is Contract on the dev platform.  
+VUE_APP_JCDECAUX_CITY is the city you aim, see [here](https://developer.jcdecaux.com/#/opendata/vls?page=static) it's name is Contract on the dev platform.
+
+## Run the app
+
+To run the app:  
+```
+npm run serve
+```
 
 ## Build the app
 To build the project:
