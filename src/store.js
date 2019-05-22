@@ -1,7 +1,6 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
-import axios from 'axios';
-import cleanStationsNames from './service/cleanNames';
+import getJCDecauxData from './service/getJCDecauxData';
 
 Vue.use(Vuex);
 
@@ -24,10 +23,9 @@ export default new Vuex.Store({
     },
   },
   actions: {
-    async getStationsData(context, city) {
+    async getStationsData(context) {
       try {
-        const response = await axios.get(`https://api.jcdecaux.com/vls/v1/stations?contract=${city}&apiKey=${process.env.VUE_APP_JCDECAUX_API_KEY}`);
-        const stations = cleanStationsNames(response.data);
+        const stations = await getJCDecauxData();
         context.commit('setStations', stations);
       } catch (error) {
         context.commit('setErrors', { msg: 'Une erreure est survenu lords de la récupération des inforamations bicloo' });
