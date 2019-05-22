@@ -1,9 +1,9 @@
 
 # Bicloo-map
-This project aims to display Bicloo stations on a map, with a filterable and searchable table.  
-This project focuses on the beautiful city of Nantes.
-The project is a Vue js App.
-It uses the JCDecaux API and the mapbox mapping solution.
+This project aims to display Bicloo stations on a map, with a filterable and searchable table.    
+This project focuses on the beautiful city of Nantes.  
+The project is a Vue js App.  
+It uses the JCDecaux API and the mapbox mapping solution.  
 
 ## Project setup
 You need to install dependencies:
