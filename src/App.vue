@@ -8,7 +8,7 @@
 export default {
   name: 'app',
   mounted() {
-    this.$store.dispatch('getStationsData', process.env.VUE_APP_JCDECAUX_CITY);
+    this.$store.dispatch('getStationsData');
   },
 };
 </script>
