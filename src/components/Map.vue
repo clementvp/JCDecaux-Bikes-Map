@@ -5,7 +5,7 @@
     :zoom="zoom"
     :center="center"
     >
-    <div v-for="station in stations" :key=station.name>
+    <div v-for="station in stations" :key=station.number>
         <MglMarker :coordinates="[station.position.lng, station.position.lat]" color="#f17825" >
           <MglPopup>
             <div>
