@@ -1,5 +1,5 @@
 <template>
-  <div class="mapComponent">
+  <div class="mapComponent" v-if=mapIsReady>
     <MglMap :accessToken="accessToken"
     :mapStyle="mapStyle"
     :zoom="zoom"
@@ -24,6 +24,7 @@
 import Mapbox from 'mapbox-gl';
 import { MglMap, MglMarker, MglPopup } from 'vue-mapbox';
 
+
 export default {
   name: 'mapComponent',
   components: {
@@ -35,8 +36,7 @@ export default {
     return {
       accessToken: process.env.VUE_APP_MAPBOX_TOKEN,
       mapStyle: process.env.VUE_APP_MAPBOX_STYLE,
-      center: [-1.5536, 47.21837],
-      zoom: 13,
+      zoom: 12,
     };
   },
   created() {
@@ -46,8 +46,14 @@ export default {
     stations() {
       return this.$store.state.stationsForMap;
     },
+    center() {
+      return this.$store.state.centeredCityCoords;
+    },
+    mapIsReady() {
+      return this.$store.state.mapIsReady;
+    },
   },
-  mounted() {
+  async mounted() {
     this.getLocation();
   },
   methods: {
@@ -58,7 +64,7 @@ export default {
     },
     showPosition(position) {
       this.zoom = 14;
-      this.center = [position.coords.longitude, position.coords.latitude];
+      this.center([position.coords.longitude, position.coords.latitude]);
     },
   },
 };
