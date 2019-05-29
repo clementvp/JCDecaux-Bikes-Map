@@ -9,6 +9,7 @@ export default {
   name: 'app',
   mounted() {
     this.$store.dispatch('getStationsData');
+    this.$store.dispatch('getCenteredCityCoords');
   },
 };
 </script>
