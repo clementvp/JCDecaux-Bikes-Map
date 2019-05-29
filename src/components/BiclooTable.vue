@@ -1,9 +1,16 @@
 <template>
   <div class="bicloo-table">
     <div class="columns">
-      <div class="column is-half">
-        <b-field label="Recherche par nom de station">
-          <b-input v-model="search" />
+      <div class="column is-half" >
+        <label class="title is-6">Rechercher par nom de stations</label>
+        <b-field grouped >
+          <b-input v-model="search" type="search" icon="magnify" id="search-input" />
+          <div @click="resetSearch()" id="reseat-search">
+            <b-icon
+              icon="close-circle"
+              size="is-medium">
+            </b-icon>
+          </div>
         </b-field>
       </div>
     </div>
@@ -28,7 +35,6 @@
     </b-table>
   </div>
 </template>
-
 <script>
 
 
@@ -48,5 +54,15 @@ export default {
       return result;
     },
   },
+  methods: {
+    resetSearch() {
+      this.search = '';
+    },
+  },
 };
 </script>
+<style scoped>
+#reseat-search:hover{
+  cursor: pointer;
+}
+</style>
