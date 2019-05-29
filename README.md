@@ -1,5 +1,5 @@
 
-# JCDecaux Bikes-map
+# JCDecaux Bikes Map
 This project aims to display JCDecaux's bikes stations with informations on a map, with a filterable and searchable table.      
 The project is a Vue js App.  
 It uses the JCDecaux API and the mapbox mapping solution.
