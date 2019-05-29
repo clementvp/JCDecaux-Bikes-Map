@@ -14,7 +14,7 @@
         </b-field>
       </div>
     </div>
-    <b-table :data="stations" :paginated="true" :per-page="17">
+    <b-table :data="stations" :paginated="true" :per-page="17" :selected.sync="selected">
       <template slot-scope="props">
         <b-table-column field="name" label="Nom" sortable>{{ props.row.name}}</b-table-column>
         <b-table-column
@@ -43,6 +43,7 @@ export default {
   data() {
     return {
       search: '',
+      selected: null,
     };
   },
   computed: {
@@ -57,6 +58,12 @@ export default {
   methods: {
     resetSearch() {
       this.search = '';
+      this.selected = null;
+    },
+  },
+  watch: {
+    selected(selection) {
+      this.search = selection.name;
     },
   },
 };
