@@ -37,6 +37,15 @@ export default new Vuex.Store({
       } catch (error) {
         context.commit('setErrors', { msg: 'Une erreure est survenu lord de la récupération des informations JCDecaux' });
       }
+
+      setInterval(async () => {
+        try {
+          const stations = await getJCDecauxData();
+          context.commit('setStations', stations);
+        } catch (error) {
+          context.commit('setErrors', { msg: 'Une erreure est survenu lord de la récupération des informations JCDecaux' });
+        }
+      }, 600000);
     },
     async getCenteredCityCoords(context) {
       try {
