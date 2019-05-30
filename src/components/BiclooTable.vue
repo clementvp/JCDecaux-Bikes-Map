@@ -63,7 +63,9 @@ export default {
   },
   watch: {
     selected(selection) {
-      this.search = selection.name;
+      if (this.selected) {
+        this.search = selection.name;
+      }
     },
   },
 };
