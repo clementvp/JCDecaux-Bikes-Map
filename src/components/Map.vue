@@ -12,6 +12,7 @@
               <h4 class="title is-5">{{station.name}}</h4>
               <h5 class="subtitle is-5">Status: {{station.status}}</h5>
               <h5 class="subtitle is-5">Vélos disponibles: {{station.available_bikes}}</h5>
+              <h5 class="subtitle is-5">Plots disponibles: {{station.available_bike_stands}}</h5>
             </div>
           </MglPopup>
         </MglMarker>
