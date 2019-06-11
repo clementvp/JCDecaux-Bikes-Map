@@ -35,7 +35,7 @@ export default new Vuex.Store({
         const stations = await getJCDecauxData();
         context.commit('setStations', stations);
       } catch (error) {
-        context.commit('setErrors', { msg: 'Une erreure est survenu lord de la récupération des informations JCDecaux' });
+        context.commit('setErrors', { msg: 'Une erreure est survenu lors de la récupération des informations JCDecaux' });
       }
 
       setInterval(async () => {
@@ -43,7 +43,7 @@ export default new Vuex.Store({
           const stations = await getJCDecauxData();
           context.commit('setStations', stations);
         } catch (error) {
-          context.commit('setErrors', { msg: 'Une erreure est survenu lord de la récupération des informations JCDecaux' });
+          context.commit('setErrors', { msg: 'Une erreure est survenu lors de la récupération des informations JCDecaux' });
         }
       }, 600000);
     },
@@ -52,7 +52,7 @@ export default new Vuex.Store({
         const coordinates = await geocodeCity();
         context.commit('setCenteredCityCoords', coordinates);
       } catch (error) {
-        context.commit('setErrors', { msg: 'Une erreure est survenu lord de la récupération des informations de geocoding de la ville ' });
+        context.commit('setErrors', { msg: 'Une erreure est survenu lors de la récupération des informations de geocoding de la ville ' });
       }
     },
   },
