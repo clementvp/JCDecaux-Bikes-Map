@@ -1,20 +1,17 @@
 <template>
   <div class="bicloo-table">
     <div class="columns">
-      <div class="column is-half" >
+      <div class="column is-half">
         <label class="title is-6">Rechercher par nom de stations</label>
-        <b-field grouped >
-          <b-input v-model="search" type="search" icon="magnify" id="search-input" />
+        <b-field grouped>
+          <b-input v-model="search" type="search" icon="magnify" id="search-input"/>
           <div @click="resetSearch()" id="reseat-search">
-            <b-icon
-              icon="close-circle"
-              size="is-medium">
-            </b-icon>
+            <b-icon icon="close-circle" size="is-medium"></b-icon>
           </div>
         </b-field>
       </div>
     </div>
-    <b-table :data="stations" :paginated="true" :per-page="17" :selected.sync="selected">
+    <b-table :data="stations" :paginated="true" :per-page="10" :selected.sync="selected">
       <template slot-scope="props">
         <b-table-column field="name" label="Nom" sortable>{{ props.row.name}}</b-table-column>
         <b-table-column
@@ -27,10 +24,7 @@
           label="Plots disponibles"
           sortable
         >{{ props.row.available_bike_stands }}</b-table-column>
-        <b-table-column field="status"
-         label="Status"
-         sortable>{{ props.row.status }}
-        </b-table-column>
+        <b-table-column field="status" label="Status" sortable>{{ props.row.status }}</b-table-column>
       </template>
     </b-table>
   </div>
@@ -71,7 +65,7 @@ export default {
 };
 </script>
 <style scoped>
-#reseat-search:hover{
+#reseat-search:hover {
   cursor: pointer;
 }
 </style>
