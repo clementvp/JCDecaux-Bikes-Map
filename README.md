@@ -5,7 +5,7 @@ The project is a Vue js App.
 It uses the JCDecaux API and the mapbox mapping solution.
 
 You can select any french JCDecaux contracts as city, see [here](https://developer.jcdecaux.com/#/opendata/vls?page=static)  
-To choose , and diplay contract's stations informations, just set the env variable VUE_APP_JCDECAUX_CITY as the city you aim, like nantes or creteil or toulouse or lyon etc,according to the [doc](https://developer.jcdecaux.com/#/opendata/vls?page=static)  
+To choose , and display contract's stations informations, just set the env variable VUE_APP_JCDECAUX_CITY as the city you aim, like nantes or creteil or toulouse or lyon etc,according to the [doc](https://developer.jcdecaux.com/#/opendata/vls?page=static)  
 
 ## Project setup
 You need to install dependencies:
