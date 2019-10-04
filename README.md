@@ -45,6 +45,7 @@ npm run build
 
 This command give you a dist folder.  
 You are free to host this folder anywhere you want.
+Mine is hosting on a personal cap rover instance.
 
 ## Contributing to the project
 You are free to submit PR.  
